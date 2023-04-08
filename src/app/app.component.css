@@ -1,0 +1,39 @@
+body {
+  font-family: "Open Sans", Helvetica, Arial, "sans-serif"; 
+}
+
+input, textarea, select {
+  font-size: 16px;
+  padding: 10px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 1px solid rgba(0, 74, 124, 0.6);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.error-message {
+  color: red;
+}
+
+.valid {
+  border: 1px solid var(--green);
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.invalid:focus {
+  border-color: red;
+}
