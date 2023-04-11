@@ -1,4 +1,4 @@
-export interface IProduto {
+export interface IProduct {
   id: number;
   description: string;
   price: number;
@@ -6,7 +6,7 @@ export interface IProduto {
   image: string;
 }
 
-export const produtos = [
+export const products = [
   { id: 1, description: "Mouse gamer", price: 439.00, descriptionPrice: "À vista no PIX", image: "/assets/mouse-3.jpg" },
   { id: 2, description: "Monitor muito bom", price: 1200.50, descriptionPrice: "À vista no PIX", discount: 2000.00, image: "/assets/monitor-1.jpg" },
   { id: 3, description: "Teclado excelente", price: 749.99, descriptionPrice: "À vista no PIX", image: "/assets/teclado-1.jpg" },
