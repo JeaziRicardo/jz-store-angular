@@ -21,4 +21,8 @@ export class ProductDetailsComponent implements OnInit {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.product = this.productsService.getOne(id);
   }
+
+  addCart(): void {
+    alert("Produto adicionado ao carrinho!");
+  }
 }
