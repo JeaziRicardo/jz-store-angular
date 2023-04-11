@@ -6,9 +6,9 @@ export interface IProduct {
   image: string;
 }
 
-export const products = [
+export const products: IProduct[] = [
   { id: 1, description: "Mouse gamer", price: 439.00, descriptionPrice: "À vista no PIX", image: "/assets/mouse-3.jpg" },
-  { id: 2, description: "Monitor muito bom", price: 1200.50, descriptionPrice: "À vista no PIX", discount: 2000.00, image: "/assets/monitor-1.jpg" },
+  { id: 2, description: "Monitor muito bom", price: 1200.50, descriptionPrice: "À vista no PIX", image: "/assets/monitor-1.jpg" },
   { id: 3, description: "Teclado excelente", price: 749.99, descriptionPrice: "À vista no PIX", image: "/assets/teclado-1.jpg" },
   { id: 4, description: "Fone para quem joga FPS", price: 599.99, descriptionPrice: "À vista no PIX", image: "/assets/fone-de-ouvido-2.jpg" },
   { id: 5, description: "Fone de ouvido", price: 299.99, descriptionPrice: "À vista no PIX", image: "/assets/fone-de-ouvido-1.jpg" },
