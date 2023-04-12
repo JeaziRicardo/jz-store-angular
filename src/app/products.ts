@@ -6,6 +6,10 @@ export interface IProduct {
   image: string;
 }
 
+export interface ICartProduct extends IProduct {
+  quantity: number;
+}
+
 export const products: IProduct[] = [
   { id: 1, description: "Mouse gamer", price: 439.00, descriptionPrice: "À vista no PIX", image: "/assets/mouse-3.jpg" },
   { id: 2, description: "Monitor muito bom", price: 1200.50, descriptionPrice: "À vista no PIX", image: "/assets/monitor-1.jpg" },
