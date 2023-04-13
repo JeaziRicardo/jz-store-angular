@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { ICartProduct } from '../products';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,8 @@ export class CartComponent implements OnInit {
   total: number = 0;
 
   constructor(
-    public cartService: CartService
+    public cartService: CartService,
+    private route: Router,
   ) { }
 
   ngOnInit(): void {
@@ -30,5 +32,11 @@ export class CartComponent implements OnInit {
   totalPrice(): number {
     this.total = this.cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     return this.total;
+  }
+
+  checkout(): void {
+    alert('A compra foi realizada com sucesso!');
+    this.cartService.clearCart();
+    this.route.navigate(['/']);
   }
 }
