@@ -8,7 +8,7 @@
       <label>
         Quantidade:
         <input type="number" min="1" [(ngModel)]="item.quantity">
-        <button class="remove-button">
+        <button class="remove-button" (click)="removeItem(item)">
           <i class="fa-sharp fa-solid fa-xmark"></i>
         </button>
       </label>
