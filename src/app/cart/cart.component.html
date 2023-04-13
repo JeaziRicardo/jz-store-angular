@@ -1,14 +1,16 @@
 <h2 class="cart-title">Carrinho de compras</h2>
 <div>
   <ul>
-    <li>
-      <img src="" alt="imagem do produto">
-      <p>Nome do produto</p>
-      <p>Preço</p>
+    <li *ngFor="let item of cartItems">
+      <img [src]="item.image" [alt]="item.description">
+      <p>{{ item.description }}</p>
+      <p>{{ item.price | currency: 'BRL' }}</p>
       <label>
         Quantidade:
-        <input type="number" min="1">
-        <button class="remove-button"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+        <input type="number" min="1" [(ngModel)]="item.quantity">
+        <button class="remove-button">
+          <i class="fa-sharp fa-solid fa-xmark"></i>
+        </button>
       </label>
     </li>
   </ul>
