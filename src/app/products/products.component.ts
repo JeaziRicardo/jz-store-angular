@@ -18,14 +18,13 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      const description = params['description'].toLowerCase();
+      const description = params['description']?.toLowerCase() || '';
 
-      if(!description) {
+      if(description) {
+        this.productsList = this.productsService.getAll().filter(product => product.description.toLowerCase().includes(description));
+      } else {
         this.productsList = this.productsService.getAll();
-        return;
       }
-
-      this.productsList = this.productsService.getAll().filter(product => product.description.toLowerCase().includes(description));
     });
   }
 }
